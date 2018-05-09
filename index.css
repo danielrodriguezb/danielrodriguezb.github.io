@@ -1,0 +1,37 @@
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	width: 100vw;
+	padding-top: 2%;
+}
+.title {
+	margin: 0 auto;
+	margin-left: 5%;
+	width: 100%;
+	/*background: pink;*/
+	font-size: 1.4rem;
+}
+.qlist {
+	/*border: 1px solid red;*/
+	/*margin: 0 auto;*/
+	margin-top: 0;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	left: 0;
+	/*left: 50%;
+	transform: translateX(-50%);*/
+}
+.q {
+	/*border: 1px solid red;*/
+	/*position: absolute;*/
+	width: 100%;
+	height: 100%;
+	font-size: 8px;
+	list-style: none;
+	text-decoration: none;
+}
+
