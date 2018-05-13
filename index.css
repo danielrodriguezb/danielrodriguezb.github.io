@@ -6,10 +6,8 @@ p {
   box-sizing: border-box;
 }
 body {
-  font-family: "Montserrat", serif;
-  color: #444;
-  background: #FAFAFA;
-  color: #29323a;
+  font-family: "Lora", serif;
+  background: #FFFFFF;
   font-size: 2em;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
@@ -17,33 +15,38 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  color: #444;
   position: relative;
 }
 
 #app {
   position: absolute;
-  margin: 0 auto;
-  margin-top: 3%;
+  margin: 4% auto 0;
   width: 100%;
+}
+.logo {
+  margin: 3% auto;
+  width: 8%;
+  height: 4%;
+  text-align: center;
 }
 .subsubject {
   /*background: pink;*/
-  /*margin-left: 3%;*/
   margin: 0 auto 6%;
   position: relative;
   max-width: 94%;
   border-radius: 10px;
   padding-top: 1.5%;
-  /*will-change: transform;*/
+  will-change: transform;
   padding-left: 1.5%;
-  box-shadow: 0px 12px 35px rgba(0,0,0,0.15);
-  opacity: 0;
+  /*padding-bottom: 0.5%;*/
+  box-shadow: 0px 12px 35px rgba(32,56,99,0.2);
+  /*opacity: 0;
   transform: translate3d(0, 20px, 0);
   -webkit-transform: translate3d(0, 20px, 0);
   -moz-transform: translate3d(0, 20px, 0);
   -ms-transform: translate3d(0, 20px, 0);
-  /*transform: translateY(20px);*/
-  transition: opacity 500ms ease, transform 400ms ease;
+  transition: opacity 500ms ease, transform 400ms ease;*/
 }
 
 .fadedin {
@@ -57,14 +60,15 @@ body {
 	/*background: pink;*/
   /*position: absolute;*/
   margin: 0;
-  margin-bottom: 2%;
+  margin-bottom: 2.5%;
   width: auto;
   margin-left: 1%;
-  font-size: 1.5em;
+  font-size: 1.7em;
   text-align: left;
+  font-weight: 700;
 }
 .qnumber {
-  font-size: 0.4em;
+  font-size: 0.5em;
   color: #aaa;
 }
 .qlist {
@@ -81,45 +85,56 @@ body {
   overflow: hidden;
   text-align: left;
 }
+.qt-container,
+.aw-container {
+  width: 100%;
+  min-height: 65vh;
+  margin-bottom: 40px;
+}
 .qt {
-  /*background: pink;*/
-	font-size: 0.8em;
+	font-size: 0.7em;
   font-weight: 700;
 	list-style: none;
 	text-decoration: none;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   margin-left: 1%;
   opacity: 0.85;
   text-align: left !important;
 }
 .aw {
-  /*background: red;*/
-  opacity: 0.85;
-  font-size: 0.6em;
+  opacity: 0.8;
+  font-size: 0.65em;
   font-weight: 400;
   line-height: 1.2;
-  margin-bottom: 50px;
+  margin:0 0 20px;
+  /*margin-bottom: 60px;*/
   margin-left: 1%;
   text-align: left;
-  /*font-family: "Arial", sans-serif;*/
+  /*font-family: "San Francisco", "Montserrat", "Arial", sans-serif;*/
 }
 
 @media screen and (max-width: 414px) {
   .subsubject {
-    margin: 0 auto;
-    max-width: 93%;
+    margin: 0 auto 15%;
+    max-width: 100%;
     padding-top: 4%;
+    border-radius: 0;
   }
   .title {
     margin-bottom: 7%;
     padding: 0;
     margin-left: 3.5%;
+    font-size: 1.4em;
+  }
+  .qt-container,
+  .aw-container {
+    min-height: 100vh;
   }
   .qt {
     font-size: 0.6em;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     margin-left: 3.5%;
   }
   .aw {
@@ -128,5 +143,10 @@ body {
   }
   .qnumber {
     margin-top: 6%;
+  }
+  .logo {
+    margin: 6% auto;
+    width: 20%;
+    height: 15%;
   }
 }
