@@ -48,12 +48,12 @@ body {
 .title {
 	/*background: pink;*/
   /*position: absolute;*/
-  text-align: left;
   margin: 0;
   margin-bottom: 2%;
   width: auto;
   margin-left: 1%;
   font-size: 1.5em;
+  text-align: left;
 }
 .qnumber {
   font-size: 0.4em;
@@ -71,6 +71,7 @@ body {
   max-width: 94%;
   position: relative;
   overflow: hidden;
+  text-align: left;
 }
 .qt {
   /*background: pink;*/
@@ -81,6 +82,7 @@ body {
   margin-bottom: 10px;
   margin-left: 1%;
   opacity: 0.85;
+  text-align: left !important;
 }
 .aw {
   /*background: red;*/
@@ -90,6 +92,7 @@ body {
   line-height: 1.2;
   margin-bottom: 50px;
   margin-left: 1%;
+  text-align: left;
   /*font-family: "Arial", sans-serif;*/
 }
 
