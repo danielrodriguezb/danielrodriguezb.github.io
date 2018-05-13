@@ -1,29 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Semio preguntas</title>
 	<link rel="stylesheet" href="index.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
+  <link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body>
 	
 	<div id="app">
-		
-		<h1 class="title">Ictericia.</h1>
-		<ul class="qlist">
-			<div class="q">Tinte amarillento causado por hiperbilirrubinemia > 1,2mg/dl. Cierto?</div>
-			<li class="q">1</li>
-			<li class="q">2</li>
-			<li class="q">3</li>
-			<li class="q">4</li>
-			<li class="q">5</li>
-		</ul>
+
+    <div class="subsubject">
+  		<h1 class="title">Ictericia. <span class="qnumber">(1)</span></h1>
+  		<ul class="qlist">
+  			<li class="qt">Tinte amarillento causado por hiperbilirrubinemia > 1,2mg/dl. ¿Cierto?</li>
+        <li class="aw">Falso. La ictericia usualmente aparece en hiperbilirrubinemia > 2mg/dl.</li>
+
+        <li class="qt">¿Todo tinte ictérico es ictericia? Ejemplo de cuándo no lo es.</li>
+        <li class="aw">No. La ictericia usualmente aparece en hiperbilirrubinemia > 2mg/dl.</li>
+
+        <li class="qt">Tipos de ictericia y 1 etiología de cada una. Etiología hepatocelular más frecuente en adultos.</li>
+        <li class="aw">Principalmente, existen ictericias de tipo: hemolíticas, hepatocelulares y obstructivas intra y extra hepáticas. Hem: anemia hemolítica, anemia drepanocítica, Talasemias. hepatitis o cirrosis alcohólica.</li>
+
+  		</ul>
+    </div>
+
+    <div class="subsubject fadable">
+      <h1 class="title">Dolor. <span class="qnumber">(2)</span></h1>
+      <ul class="qlist">
+        <div class="qt">¿Todos los tejidos (u órganos) humanos generan sensación dolorosa?</div>
+        <li class="aw">
+          No. El parénquima de los orgános del cuerpo no es lo que genera la sensación, ni el tejido óseo. El tejido conjuntivo, muscular, nervios y endotelio, en mayor proporción, generan dolor. Es decir, vasos sanguíneos y nervios; pleura parietal y peritoneo parietal; músculos, articulaciones y tendones; meninges y serosas que recubren a órganos principalmente.
+        </li>
+      </ul>
+    </div>
+
+    <div class="subsubject">
+      <h1 class="title fadeable">Cefalea.</h1>
+      <ul class="qlist fadeable">
+        <li class="qt">Tinte amarillento causado por hiperbilirrubinemia > 1,2mg/dl. Cierto?</li>
+        <li class="aw">Falso. La ictericia usualmente aparece en hiperbilirrubinemia > 2mg/dl.</li>
+      </ul>
+    </div>
+<!--
+    <div class="subsubject">
+      <h1 class="title">Pulso.</h1>
+      <ul class="qlist">
+        <li class="qt">Tinte amarillento causado por hiperbilirrubinemia > 1,2mg/dl. Cierto?</li>
+        <li class="aw">Falso. La ictericia usualmente aparece en hiperbilirrubinemia > 2mg/dl.</li>
+      </ul>
+    </div>
+
+    <div class="subsubject">
+      <h1 class="title">Piel.</h1>
+      <ul class="qlist">
+        <li class="qt">Tinte amarillento causado por hiperbilirrubinemia > 1,2mg/dl. Cierto?</li>
+        <li class="aw">Falso. La ictericia usualmente aparece en hiperbilirrubinemia > 2mg/dl.</li>
+      </ul>
+    </div>
+
+    <div class="subsubject">
+      <h1 class="title">Presión.</h1>
+      <ul class="qlist">
+        <li class="qt">Tinte amarillento causado por hiperbilirrubinemia > 1,2mg/dl. Cierto?</li>
+        <li class="aw">Falso. La ictericia usualmente aparece en hiperbilirrubinemia > 2mg/dl.</li>
+      </ul>
+    </div>
+
+    <div class="subsubject">
+      <h1 class="title">Disnea.</h1>
+      <ul class="qlist">
+        <li class="qt">Tinte amarillento causado por hiperbilirrubinemia > 1,2mg/dl. Cierto?</li>
+        <li class="aw">Falso. La ictericia usualmente aparece en hiperbilirrubinemia > 2mg/dl.</li>
+      </ul>
+    </div>
+
+    <div class="subsubject">
+      <h1 class="title">Ascitis.</h1>
+      <div class="qnumber"></div>
+      <ul class="qlist">
+        <li class="qt">Tinte amarillento causado por hiperbilirrubinemia > 1,2mg/dl. Cierto?</li>
+        <li class="aw">Falso. La ictericia usualmente aparece en hiperbilirrubinemia > 2mg/dl.</li>
+
+        <li class="qt">Tinte amarillento causado por hiperbilirrubinemia > 1,2mg/dl. Cierto?</li>
+        <li class="aw">Falso. La ictericia usualmente aparece en hiperbilirrubinemia > 2mg/dl.</li>
+      </ul>
+    </div>
+
+    <div class="subsubject">
+      <h1 class="title">Edema.</h1>
+      <ul class="qlist">
+        <li class="qt">Tinte amarillento causado por hiperbilirrubinemia > 1,2mg/dl. Cierto?</li>
+        <li class="aw">Falso. La ictericia usualmente aparece en hiperbilirrubinemia > 2mg/dl.</li>
+      </ul>
+    </div>
+
+    <div class="subsubject">
+      <h1 class="title">Bioseguridad (Símbolo).</h1>
+      <ul class="qlist">
+        <li class="qt">Tinte amarillento causado por hiperbilirrubinemia > 1,2mg/dl. Cierto?</li>
+        <li class="aw">Falso. La ictericia usualmente aparece en hiperbilirrubinemia > 2mg/dl.</li>
+      </ul>
+    </div> -->
 
 
 	</div>
 
-	<script async defer src="index.js"></script>
+  <script>
+    window.onload = () => {
+      const els = document.getElementsByClassName('subsubject');
+      for (var i = 0; i < els.length; i++) {
+        els[i].classList.add('fadedin');
+      }
+    };
+  </script>
 </body>
 </html>
