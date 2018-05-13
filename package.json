@@ -1,0 +1,21 @@
+{
+  "name": "danielrodriguezb.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "live-server --no-browser --port=8888 --host=0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielrodriguezb/danielrodriguezb.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielrodriguezb/danielrodriguezb.github.io/issues"
+  },
+  "homepage": "https://github.com/danielrodriguezb/danielrodriguezb.github.io#readme"
+}
