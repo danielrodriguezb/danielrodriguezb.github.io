@@ -2,6 +2,9 @@ body,
 h1,
 div,
 span,
+ul,
+li,
+strong
 p {
   box-sizing: border-box;
 }
@@ -35,7 +38,7 @@ body {
   position: relative;
   max-width: 94%;
   background: #FFFFFF;
-  border-radius: 6px;
+  /*border-radius: 6px;*/
   padding-top: 1.5%;
   padding-left: 1.5%;
   contain: content;
@@ -91,7 +94,7 @@ body {
 .qt-container,
 .aw-container {
   width: 100%;
-  min-height: 50vh;
+  /*min-height: 50vh;*/
   margin-bottom: 40px;
 }
 .qt-container {
