@@ -15,7 +15,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  color: #444;
+  color: rgb(74, 81, 95);
   position: relative;
 }
 
@@ -34,12 +34,13 @@ body {
   /*background: pink;*/
   margin: 0 auto 6%;
   position: relative;
-  max-width: 94%;
-  border-radius: 10px;
+  max-width: 93%;
+  /*border-radius: 6px;*/
   padding-top: 1.5%;
   will-change: transform;
-<<<<<<< HEAD
-  box-shadow: 0 1px 3px rgba(14,43,93,0.18), 0 1px 2px rgba(14,43,93,0.3);
+  /*box-shadow: 0 1px 3px rgba(14,43,93,0.18), 0 1px 2px rgba(14,43,93,0.3);*/
+  /*box-shadow: 0px 12px 35px rgba(32,56,99,0.2);*/
+  box-shadow: 0px 4px 20px rgba(14,43,93,0.25);
   opacity: 0;
   transform: translateY(20px);
   -webkit-transform: translateY(20px);
@@ -49,16 +50,7 @@ body {
   -moz-transition: opacity 500ms ease, transform 500ms ease;
   -ms-transition: opacity 500ms ease, transform 500ms ease;
   transition: opacity 500ms ease, transform 500ms ease;
-=======
   padding-left: 1.5%;
-  box-shadow: 0px 12px 35px rgba(32,56,99,0.2);
-  opacity: 0;
-  transform: translate3d(0, 20px, 0);
-  -webkit-transform: translate3d(0, 20px, 0);
-  -moz-transform: translate3d(0, 20px, 0);
-  -ms-transform: translate3d(0, 20px, 0);
-  transition: opacity 500ms ease, transform 400ms ease;
->>>>>>> parent of f87154c... Fix
 }
 
 .fadedin {
@@ -71,7 +63,7 @@ body {
 .title {
 	/*background: pink;*/
   margin: 0;
-  margin-bottom: 2.5%;
+  margin-bottom: 3%;
   width: auto;
   margin-left: 1%;
   font-size: 1.7em;
@@ -83,74 +75,75 @@ body {
   color: #aaa;
 }
 .qlist {
-	/*background: green;*/
   list-style: none;
-  /*display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;*/
 	margin-top: 0;
   padding: 0;
   max-width: 94%;
   position: relative;
   overflow: hidden;
   text-align: left;
+
 }
-.qt-container,
+.qt-container {
+  width: 100%;
+  min-height: 60vh;
+}
 .aw-container {
   width: 100%;
-  min-height: 65vh;
-  margin-bottom: 40px;
+  min-height: 20vh;
+  margin-top: 120px;
 }
 .qt {
-	font-size: 0.7em;
+	font-size: 0.65em;
   font-weight: 700;
 	list-style: none;
 	text-decoration: none;
   margin-bottom: 30px;
   margin-left: 1%;
-  opacity: 0.85;
+  opacity: 0.88;
   text-align: left !important;
 }
 .aw {
-  opacity: 0.8;
+  opacity: 0.85;
   font-size: 0.65em;
   font-weight: 400;
   line-height: 1.2;
-  margin:0 0 20px;
-  /*margin-bottom: 60px;*/
+  margin:0 0 50px;
   margin-left: 1%;
   text-align: left;
-  /*font-family: "San Francisco", "Montserrat", "Arial", sans-serif;*/
 }
 
 @media screen and (max-width: 414px) {
   .subsubject {
     margin: 0 auto 15%;
-    max-width: 100%;
+    max-width: 93%;
     padding-top: 4%;
     border-radius: 0;
   }
   .title {
     margin-bottom: 7%;
     padding: 0;
-    margin-left: 3.5%;
+    margin-left: 0;
     font-size: 1.4em;
+    text-align: center;
   }
   .qt-container,
   .aw-container {
-    min-height: 100vh;
+    min-height: 60vh;
+  }
+  .qt-container {
+    margin-bottom: 90px;
   }
   .qt {
-    font-size: 0.6em;
-    font-weight: 700;
+    font-size: 0.55em;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin-left: 3.5%;
   }
   .aw {
     font-size: 0.55em;
     margin-left: 3.5%;
+    margin-bottom: 50px;
   }
   .qnumber {
     margin-top: 6%;
