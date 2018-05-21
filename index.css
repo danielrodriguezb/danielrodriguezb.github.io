@@ -7,7 +7,7 @@ p {
 }
 body {
   font-family: "Lora", serif;
-  background: #FFFFFF;
+  background: #FAFAFA;
   font-size: 2em;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
@@ -31,10 +31,10 @@ body {
   text-align: center;
 }
 .subsubject {
-  /*background: pink;*/
   margin: 0 auto 6%;
   position: relative;
   max-width: 93%;
+  background-color: #FFFFFF;
   /*border-radius: 6px;*/
   padding-top: 1.5%;
   will-change: transform;
