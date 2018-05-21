@@ -2,12 +2,15 @@ body,
 h1,
 div,
 span,
+ul,
+li,
+strong
 p {
   box-sizing: border-box;
 }
 body {
   font-family: "Lora", serif;
-  background: #FFFFFF;
+  background: #FAFAFA;
   font-size: 2em;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
@@ -15,46 +18,56 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  color: #444;
+  color: #3a424f;
   position: relative;
 }
 
 #app {
   position: absolute;
-  margin: 4% auto 0;
+  margin: 3% auto 0;
   width: 100%;
 }
 .logo {
-  margin: 3% auto;
+  margin: 0 auto;
   width: 8%;
   height: 4%;
   text-align: center;
 }
 .subsubject {
-  /*background: pink;*/
-  margin: 0 auto 6%;
+  margin: 0 auto 2.5%;
   position: relative;
   max-width: 94%;
-  border-radius: 10px;
+  background: #FFFFFF;
+  /*border-radius: 6px;*/
   padding-top: 1.5%;
-  will-change: transform;
   padding-left: 1.5%;
-  box-shadow: 0px 12px 35px rgba(32,56,99,0.2);
+  contain: content;
+  will-change: transform;
+  /*box-shadow: 0px 12px 35px rgba(14, 43, 93, 0.25);*/
+  box-shadow: 0 1px 3px rgba(14,43,93,0.18), 0 1px 2px rgba(14,43,93,0.3);
   opacity: 0;
-  transform: translate3d(0, 20px, 0);
-  -webkit-transform: translate3d(0, 20px, 0);
-  -moz-transform: translate3d(0, 20px, 0);
-  -ms-transform: translate3d(0, 20px, 0);
-  transition: opacity 500ms ease, transform 400ms ease;
+  transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -webkit-transition: opacity 500ms ease, transform 500ms ease, box-shadow 300ms ease, box-shadow 250ms ease;
+  -moz-transition: opacity 500ms ease, transform 500ms ease, box-shadow 300ms ease, box-shadow 250ms ease;
+  -ms-transition: opacity 500ms ease, transform 500ms ease, box-shadow 300ms ease, box-shadow 250ms ease;
+  transition: opacity 500ms ease, transform 500ms ease, box-shadow 300ms ease, box-shadow 250ms ease;
 }
 
+.subsubject:hover,
+.subsubject:focus {
+  box-shadow: 0 5px 20px rgba(14,43,93,0.19), 0 3px 6px rgba(14,43,93,0.23);
+  transform: translateY(-3px);
+}
 .fadedin {
   opacity: 1;
-  transform: translate3d(0, 0px, 0);
-  -moz-transform: translate3d(0, 0px, 0);
-  -ms-transform: translate3d(0, 20px, 0);
+  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
 }
-
 .title {
 	/*background: pink;*/
   margin: 0;
@@ -70,12 +83,7 @@ body {
   color: #aaa;
 }
 .qlist {
-	/*background: green;*/
   list-style: none;
-  /*display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;*/
 	margin-top: 0;
   padding: 0;
   max-width: 94%;
@@ -86,11 +94,14 @@ body {
 .qt-container,
 .aw-container {
   width: 100%;
-  min-height: 65vh;
+  /*min-height: 50vh;*/
   margin-bottom: 40px;
 }
+.qt-container {
+  margin-bottom: 100px;
+}
 .qt {
-	font-size: 0.7em;
+	font-size: 0.65em;
   font-weight: 700;
 	list-style: none;
 	text-decoration: none;
@@ -101,32 +112,34 @@ body {
 }
 .aw {
   opacity: 0.8;
-  font-size: 0.65em;
+  font-size: 0.6em;
   font-weight: 400;
   line-height: 1.2;
-  margin:0 0 20px;
+  margin:0 0 30px;
   /*margin-bottom: 60px;*/
   margin-left: 1%;
   text-align: left;
-  /*font-family: "San Francisco", "Montserrat", "Arial", sans-serif;*/
 }
 
 @media screen and (max-width: 414px) {
+  #app {
+    margin: 5% 0 auto;
+  }
   .subsubject {
-    margin: 0 auto 15%;
-    max-width: 100%;
+    margin: 0 auto 8%;
+    /*min-width: 100%;*/
     padding-top: 4%;
-    border-radius: 0;
   }
   .title {
     margin-bottom: 7%;
     padding: 0;
     margin-left: 3.5%;
     font-size: 1.4em;
+    text-align: center;
   }
   .qt-container,
   .aw-container {
-    min-height: 100vh;
+    min-height: 60vh;
   }
   .qt {
     font-size: 0.6em;
@@ -146,5 +159,18 @@ body {
     margin: 6% auto;
     width: 20%;
     height: 15%;
+  }
+}
+@media screen and (max-height: 480px) {
+  #app {
+    margin-top: 0;
+  }
+  .subsubject {
+    min-width: 100%;
+    border-radius: 0;
+  }
+  .qt, .aw {
+    font-size: 0.55em;
+    margin-left: 5%;
   }
 }
