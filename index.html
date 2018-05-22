@@ -522,18 +522,18 @@
 
   </div>
   <script>
-    // (function() {
-    //   window.onload = function() {
-    //     const els = document.getElementsByClassName('subsubject');
-    //     for (var i = 0; i < els.length; i++) {
-    //       els[i].addEventListener('transitionend', function(e) {
-    //         e.target.style.willChange = 'auto';
-    //       });
-    //       els[i].classList.add('fadedin');
-    //       els[i].removeEventListener('transitionend', null);
-    //     }
-    //   };
-    // })();
+    (function() {
+      window.onload = function() {
+        const els = document.getElementsByClassName('subsubject');
+        for (var i = 0; i < els.length; i++) {
+          els[i].addEventListener('transitionend', function(e) {
+            e.target.style.willChange = 'auto';
+          });
+          els[i].classList.add('fadedin');
+          els[i].removeEventListener('transitionend', null);
+        }
+      };
+    })();
   </script>
 </body>
 </html>
