@@ -27,21 +27,60 @@
   <style>
     body {
       margin: 0;
-      height: 100vh;
+      padding: 0;
       position: relative;
     }
-    .vid-ct {
+    .ct {
+      width: 100%;
+      height: 100%;
       position: relative;
-      display: flex;
+      /*display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       max-width: 100vw;
-      max-height: 100vh;
+      max-height: 100vh;*/
+    }
+    .v-ct {
+      position: relative;
+      width: 60%;
+      height: 100%;
+      max-width: 80%;
+      margin: 2% auto 0;
+      background-color: #FFFFFF;
+    }
+    #vid {
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      border-radius: 6px;
+    }
+    #bg-blur {
+      width: 93%;
+      height: 60%;
+      position: absolute;
+      background: #000;
+      bottom: 0;
+      left: 50%;
+      z-index: -1;
+      transform: translate(-50%, 5px);
+      opacity: 0.45;
+      filter: blur(18px);
+    }
+    .btn {
+      display: block;
+      margin: 37px auto 0;
     }
     @media screen and (max-width: 320px) {
       .btn {
         display: none;
+      }
+      #bg-blur {
+        display: none;
+      }
+      #vid {
+        box-shadow: 0px 10px 25px rgba(0,0,0,0.18);
       }
     }
   </style>
@@ -54,16 +93,19 @@
       <div class="logo-title">¿?</div>
     </div> -->
 
-    <div class="vid-ct">
-      <video
-        id="vid"
-        width="1920px"
-        height="1080px"
-        source="https://r4---sn-hp57kn7s.c.drive.google.com/videoplayback?id=584774c57892f65c&itag=59&source=webdrive&requiressl=yes&mm=30&mn=sn-hp57kn7s&ms=nxu&mv=m&pl=19&sc=yes&ttl=transient&ei=bXkcW7PIBIze-wX7s49g&susc=dr&driveid=1S4zkZUBlfYHkYgLPKFf1j9fyY1rzHvjQ&app=texmex&mime=video/mp4&lmt=1528588454804061&mt=1528592718&ip=200.109.20.22&ipbits=0&expire=1528607149&cp=QVNHWkdfVlFSSlhOOlNqNEp2SXJYMEJr&sparams=ip,ipbits,expire,id,itag,source,requiressl,mm,mn,ms,mv,pl,sc,ttl,ei,susc,driveid,app,mime,lmt,cp&signature=B99F49F845273C9F2A5FE2A7E5132D05E46E2600.B468E90F688219565A562E8A942DC372D7058DD8&key=ck2&cpn=-yZq3AInaiocyrrm&c=WEB_EMBEDDED_PLAYER&cver=20180607"
-        src="https://youtu.be/niviooakBLs"
-        source="./media/vid/out1.m3u8"
-        controls
-      ></video>
+    <div class="ct">
+      <div class="v-ct">
+        <video
+          id="vid"
+          poster="./img/favicon-144.png"
+          controls>
+
+          <!-- <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4"> -->
+          <source src="./media/vid/out1.mp4" type="video/mp4">
+          <source src="./media/vid/out1.m3u8" type="video/quicktime">
+        </video>
+        <div id="bg-blur"></div>
+      </div>
 
       <button
         class="btn" 
