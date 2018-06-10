@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Semio preguntas</title>
-	<link rel="stylesheet" href="index.css">
+	<!-- <link rel="stylesheet" href="index.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
   <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48" href="favicon.ico" />
   <link rel="icon" type="img/png" sizes="16x16 24x24 32x32 48x48" href="favicon.ico" />
@@ -24,6 +24,27 @@
   <!-- Windows 8 -->
   <meta name="msapplication-TileImage" content="img/favicon-144.png">
   <meta name="msapplication-TileColor" content="#4a515f"/>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      position: relative;
+    }
+    .vid-ct {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 100vw;
+      max-height: 100vh;
+    }
+    @media screen and (max-width: 320px) {
+      .btn {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
 	
@@ -33,23 +54,29 @@
       <div class="logo-title">¿?</div>
     </div> -->
 
-    <video
-      id="vid"
-      width="1920"
-      height="1080"
-      source="https://r4---sn-hp57kn7s.c.drive.google.com/videoplayback?id=584774c57892f65c&itag=59&source=webdrive&requiressl=yes&mm=30&mn=sn-hp57kn7s&ms=nxu&mv=m&pl=19&sc=yes&ttl=transient&ei=bXkcW7PIBIze-wX7s49g&susc=dr&driveid=1S4zkZUBlfYHkYgLPKFf1j9fyY1rzHvjQ&app=texmex&mime=video/mp4&lmt=1528588454804061&mt=1528592718&ip=200.109.20.22&ipbits=0&expire=1528607149&cp=QVNHWkdfVlFSSlhOOlNqNEp2SXJYMEJr&sparams=ip,ipbits,expire,id,itag,source,requiressl,mm,mn,ms,mv,pl,sc,ttl,ei,susc,driveid,app,mime,lmt,cp&signature=B99F49F845273C9F2A5FE2A7E5132D05E46E2600.B468E90F688219565A562E8A942DC372D7058DD8&key=ck2&cpn=-yZq3AInaiocyrrm&c=WEB_EMBEDDED_PLAYER&cver=20180607"
-      source="./media/vid/out1.m3u8"
-      controls
-      poster="http://video-js.zencoder.com/oceans-clip.jpg"
-    ></video>
+    <div class="vid-ct">
+      <video
+        id="vid"
+        width="1920px"
+        height="1080px"
+        source="https://r4---sn-hp57kn7s.c.drive.google.com/videoplayback?id=584774c57892f65c&itag=59&source=webdrive&requiressl=yes&mm=30&mn=sn-hp57kn7s&ms=nxu&mv=m&pl=19&sc=yes&ttl=transient&ei=bXkcW7PIBIze-wX7s49g&susc=dr&driveid=1S4zkZUBlfYHkYgLPKFf1j9fyY1rzHvjQ&app=texmex&mime=video/mp4&lmt=1528588454804061&mt=1528592718&ip=200.109.20.22&ipbits=0&expire=1528607149&cp=QVNHWkdfVlFSSlhOOlNqNEp2SXJYMEJr&sparams=ip,ipbits,expire,id,itag,source,requiressl,mm,mn,ms,mv,pl,sc,ttl,ei,susc,driveid,app,mime,lmt,cp&signature=B99F49F845273C9F2A5FE2A7E5132D05E46E2600.B468E90F688219565A562E8A942DC372D7058DD8&key=ck2&cpn=-yZq3AInaiocyrrm&c=WEB_EMBEDDED_PLAYER&cver=20180607"
+        src="https://youtu.be/niviooakBLs"
+        source="./media/vid/out1.m3u8"
+        controls
+      ></video>
 
-    <button
-      id="ctrls-off"
-    >Controls OFF</button>
+      <button
+        class="btn" 
+        id="ctrls-off"
+      >Controls OFF</button>
 
-    <button
-      id="ctrls-on"
-    >Controls ON</button>
+      <button
+        class="btn"
+        id="ctrls-on"
+        disabled
+      >Controls ON</button>
+      
+    </div>
 
   </div>
   <script>
