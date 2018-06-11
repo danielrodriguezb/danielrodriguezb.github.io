@@ -135,7 +135,7 @@
   <!-- <script defer type="module" src="./index.js"></script> -->
   <script>
     (function() {
-      var createIframe = (url) => {
+      var createIframe = function(url) {
         var iframe = document.createElement('iframe');
         iframe.classList.add('frame');
         document.body.appendChild(iframe);
