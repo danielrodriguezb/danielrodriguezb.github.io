@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Semio preguntas</title>
 	<!-- <link rel="stylesheet" href="index.css"> -->
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet"> -->
   <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48" href="favicon.ico" />
   <link rel="icon" type="img/png" sizes="16x16 24x24 32x32 48x48" href="favicon.ico" />
   <meta name="theme-color" content="#4a515f">
@@ -29,6 +29,7 @@
       margin: 0;
       padding: 0;
       position: relative;
+      font-family: 'Lora', sans-serif;
     }
     .ct {
       width: 100%;
@@ -46,7 +47,7 @@
       width: 65%;
       height: 100%;
       max-width: 80%;
-      margin: 2% auto 0;
+      margin: 0;
       background-color: #FFFFFF;
     }
     #vid {
@@ -72,6 +73,15 @@
       display: block;
       margin: 37px auto 0;
     }
+    .frame {
+      position: absolute;
+      width: 100%;
+      height: 65vh;
+      outline: none;
+      background: none;
+      border: none;
+      background-color: black;
+    }
     @media screen and (max-width: 320px) {
       .btn {
         display: none;
@@ -95,51 +105,43 @@
 
     <div class="ct">
       <div class="v-ct">
-        <video
+        <!-- <video
           id="vid"
-          poster="./img/favicon-144.png"
           controls>
 
           <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
-          <!-- <source src="./media/vid/out1.mp4" type="video/mp4"> -->
+          <source src="./media/vid/out1.mp4" type="video/mp4">
           <source src="./media/vid/out1.m3u8" type="video/quicktime">
-        </video>
+          <source src="https://drive.google.com/file/d/1S4zkZUBlfYHkYgLPKFf1j9fyY1rzHvjQ/preview" type="video/mp4">
+        </video> -->
+        <!-- <iframe src="https://drive.google.com/file/d/1S4zkZUBlfYHkYgLPKFf1j9fyY1rzHvjQ/preview" width="640" height="480"></iframe> -->
         <div id="bg-blur"></div>
       </div>
 
-      <button
+      <!-- <button
         class="btn" 
         id="ctrls-off"
       >Controls OFF</button>
-
       <button
         class="btn"
         id="ctrls-on"
         disabled
-      >Controls ON</button>
+      >Controls ON</button> -->
       
     </div>
 
   </div>
+  <!-- <script defer src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script> -->
+  <!-- <script defer type="module" src="./index.js"></script> -->
   <script>
     (function() {
-      window.onload = function() {
-        const ctrlsOff = document.getElementById('ctrls-off');
-        const ctrlsOn = document.getElementById('ctrls-on');
-        const video = document.getElementById('vid');
-
-        ctrlsOff.addEventListener('click', function(e) {
-          video.removeAttribute('controls');
-          e.target.disabled = true;
-          ctrlsOn.disabled = false;
-        }, {passive: true});
-
-        ctrlsOn.addEventListener('click', function(e) {
-          video.setAttribute('controls', '');
-          e.target.disabled = true;
-          ctrlsOff.disabled = false;
-        }, {passive: true});
-      };
+      var createIframe = (url) => {
+        var iframe = document.createElement('iframe');
+        iframe.classList.add('frame');
+        document.body.appendChild(iframe);
+        iframe.src = url;
+      }
+      window.onload = createIframe('https://drive.google.com/file/d/1S4zkZUBlfYHkYgLPKFf1j9fyY1rzHvjQ/preview');
     })();
   </script>
 </body>
